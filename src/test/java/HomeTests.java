@@ -3,10 +3,6 @@ import org.testng.annotations.Test;
 
 public class HomeTests extends BaseUI {
 
-    @Test public void testHomePageLogo(){
-        driver.findElement(Locators.LOGO_IMG);   //Verifies Logo exists at top Home Page. How to test it's in right place and size?
-
-    }
 
     @Test
     public void testBookNowlink(){

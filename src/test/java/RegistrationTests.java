@@ -14,13 +14,11 @@ public class RegistrationTests extends BaseUI {
         driver.findElement(Locators.EMAIL).click();
         driver.findElement(Locators.EMAIL).sendKeys(Data.email);
         driver.findElement(Locators.PASSWORD).sendKeys(Data.password);
+        driver.findElement(Locators.BUTTON_NEXT).click();
 
-        driver.findElement(Locators.REGISTRATION_FORM);
-        //driver.findElement(Locators.TEXT_FIELD_USERNAME).sendKeys(Data.username);
-        //driver.findElement(Locators.TEXT_FIELD_PHONE).sendKeys(Data.phone);
-        //driver.findElement(Locators.TEXT_FIELD_LOCATION).sendKeys(Data.location);
-        //driver.findElement(Locators.CONFIRMATION).click();
-        //driver.findElement(Locators.BUTTON_NEXT).click();
+        driver.findElement(Locators.TEXT_FIELD_USERNAME).sendKeys(Data.username);
+        driver.findElement(Locators.TEXT_FIELD_PHONE).sendKeys(Data.phone);
+        driver.findElement(Locators.TEXT_FIELD_LOCATION).sendKeys(Data.location);
 
     }
 }

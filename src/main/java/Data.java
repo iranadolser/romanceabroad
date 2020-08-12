@@ -1,10 +1,10 @@
 public class Data {
 
     //Registration
-    public static final String email = "somebody1@somewhere.com";
-    public static final String password = "Secret01";
-    public static final String username = "BillGates";
-    public static final String phone = "6172309999";
+    public static final String email = "somebody3@somewhere.com";
+    public static final String password = "Secret03";
+    public static final String username = "NewBillGates";
+    public static final String phone = "6172303333";
     public static final String location = "California";
 
     //Home page tabs

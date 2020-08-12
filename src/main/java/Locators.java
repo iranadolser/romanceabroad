@@ -3,7 +3,6 @@ import org.openqa.selenium.By;
 public class Locators {
 
     //Home Page
-    public static final By LOGO_IMG = By.xpath("//div[@id='pjaxcontainer']/div/div/div/a/img");
     public static final By LINK_BOOK_NOW = By.xpath("//a[contains(text(),'BOOK NOW')]");
     public static final By TAB_HOW_WE_WORK = By.xpath("//a[contains(text(),'HOW WE WORK')]");
     public static final By TAB_PRETTY_WOMEN = By.xpath("//a[contains(text(),'PRETTY WOMEN')]");
@@ -17,13 +16,13 @@ public class Locators {
 
     //Registration
     public static final By EMAIL = By.cssSelector("input#email");
-    public static final By PASSWORD = By.cssSelector("input#email");
-    public static final By REGISTRATION_FORM = By.xpath("//*[@id='third-registration-page']");
+    public static final By PASSWORD = By.xpath("//input[@id='password']");
+    //public static final By REGISTRATION_FORM = By.xpath("//*[@id='third-registration-page']");  //for later
     public static final By BUTTON_NEXT = By.xpath("//button[@data-action='next-page'][text()='Next']");
     public static final By TEXT_FIELD_USERNAME = By.xpath("//input[@id='nickname']");
-    public static final By TEXT_FIELD_PHONE = By.cssSelector("//input[@name='data[phone]']");
+    public static final By TEXT_FIELD_PHONE = By.xpath("//input[@name='data[phone]']");
     public static final By TEXT_FIELD_LOCATION = By.xpath("//input[@placeholder='Type your location']");
-    public static final By CONFIRMATION = By.xpath("//input[@id='confirmation']");
+    //public static final By CONFIRMATION = By.xpath("//input[@id='confirmation']");   //for later
 
 
 

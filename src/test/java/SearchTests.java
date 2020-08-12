@@ -11,25 +11,5 @@ public class SearchTests extends BaseUI {
         System.out.println(Data.currentUrlUnderTest);
         Assert.assertEquals(Data.currentUrlUnderTest, Data.searchURL);
 
-        //driver.findElement(By.xpath("//button[@data-action='next-page'][text()='Next']")).click();
-        //comented are just checking old fashion way; all work;
-
-        WebElement NextButton = driver.findElement(Locators.BUTTON_NEXT);       //WebElement declaring option.
-        NextButton.click();
-
-
-
-        //Below are just for praticing
-
-        driver.findElement(By.xpath("//a[@class='nav-link'][@href='https://romanceabroad.com/media/index']"));
-
-        driver.get(Data.searchURL);
-        driver.findElement(By.cssSelector("#main_search_button_user_line"));
-        driver.findElement(By.cssSelector("select[name='age_max']"));
-        driver.findElement(By.cssSelector("#age_max"));
-        driver.findElement(By.xpath("//select[@id='age_max']"));
-        driver.findElement(By.xpath("//button[@id='main_search_button_user_line']"));
-        driver.findElement(By.xpath("//button[@class='btn btn-primary btn-white']"));
-
     }
 }
