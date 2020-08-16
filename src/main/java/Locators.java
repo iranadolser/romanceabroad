@@ -24,6 +24,12 @@ public class Locators {
     public static final By TEXT_FIELD_LOCATION = By.xpath("//input[@placeholder='Type your location']");
     //public static final By CONFIRMATION = By.xpath("//input[@id='confirmation']");   //for later
 
+    //Searh
+    public static final By AGE_MAX = By.cssSelector("select[name='age_max']");
+    public static final By AGE_MIN = By.cssSelector("select[name='age_min']");
+    public static final By BUTTON_SEARCH = By.cssSelector("#main_search_button_user_advanced");
+
+
 
 
 }
