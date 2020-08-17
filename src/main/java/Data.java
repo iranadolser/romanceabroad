@@ -3,7 +3,7 @@ public class Data {
     //Registration
     public static final String email = "somebody3@somewhere.com";
     public static final String password = "Secret03";
-    public static final String username = "NewBillGates";
+    public static final String username = "BGates";
     public static final String phone = "6172303333";
     public static final String location = "California";
 

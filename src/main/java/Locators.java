@@ -17,19 +17,22 @@ public class Locators {
     //Registration
     public static final By EMAIL = By.cssSelector("input#email");
     public static final By PASSWORD = By.xpath("//input[@id='password']");
-    //public static final By REGISTRATION_FORM = By.xpath("//*[@id='third-registration-page']");  //for later
     public static final By BUTTON_NEXT = By.xpath("//button[@data-action='next-page'][text()='Next']");
     public static final By TEXT_FIELD_USERNAME = By.xpath("//input[@id='nickname']");
     public static final By TEXT_FIELD_PHONE = By.xpath("//input[@name='data[phone]']");
     public static final By TEXT_FIELD_LOCATION = By.xpath("//input[@placeholder='Type your location']");
-    //public static final By CONFIRMATION = By.xpath("//input[@id='confirmation']");   //for later
+
+    public static final By DAYS = By.cssSelector("#daySelect");
+    public static final By SELECT_DAY = By.xpath("//li[@data-handler='selectDay']//a[text()='30']");
+    public static final By MONTHS = By.cssSelector("#monthSelect");
+    public static final By SELECT_MONTH = By.xpath("//li[@data-handler='selectMonth']//a[text()='Jun']");
+    public static final By YEARS = By.cssSelector("#yearSelect");
+    public static final By SELECT_YEAR = By.xpath("//li[@data-handler='selectYear']//a[text()='1979']");
 
     //Searh
     public static final By AGE_MAX = By.cssSelector("select[name='age_max']");
     public static final By AGE_MIN = By.cssSelector("select[name='age_min']");
     public static final By BUTTON_SEARCH = By.cssSelector("#main_search_button_user_advanced");
-
-
 
 
 }

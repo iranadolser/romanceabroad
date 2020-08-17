@@ -1,3 +1,4 @@
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,13 +11,31 @@ public class BaseUI {
     WebDriver driver;
     WebDriverWait wait;
     String homeURL = "https://romanceabroad.com/";
-
+    HomePage homePage;
+    BlogTabPage blogTabPage;
+    GiftsTabPage giftsTabPage;
+    HowWeWorkPage howWeWorkPage;
+    PhotoTabPage photoTabPage;
+    SearchPage searchPage;
+    SignInTabPage signInTabPage;
+    TourToUkrainePage tourToUkrainePage;
 
     @BeforeMethod
     public void setUp(){
         System.setProperty("webriver.chrome.driver","chromedriver.exe");
         driver = new ChromeDriver();
         wait = new WebDriverWait (driver, 10);
+
+        homePage = new HomePage(driver, wait);
+        blogTabPage = new BlogTabPage(driver, wait);
+        giftsTabPage = new GiftsTabPage(driver, wait);
+        howWeWorkPage = new HowWeWorkPage(driver, wait);
+        photoTabPage = new PhotoTabPage(driver, wait);
+        searchPage = new SearchPage(driver, wait);
+        signInTabPage = new SignInTabPage(driver, wait);
+        tourToUkrainePage = new TourToUkrainePage(driver, wait);
+
+        driver.manage().window().maximize();
         driver.get(homeURL);
     }
 
@@ -26,14 +45,14 @@ public class BaseUI {
     }
 
     public void getDropDownListIndex(WebElement element,int index){
-        Select DropDown = new Select(element);
-        DropDown.selectByIndex(index);
+        Select select = new Select(element);
+        select.selectByIndex(index);
 
     }
 
     public void getDropDownListValue(WebElement element,String age) {
-        Select DropDown = new Select(element);
-        DropDown.selectByValue(age);
+        Select select = new Select(element);
+        select.selectByValue(age);
 
     }
 }
