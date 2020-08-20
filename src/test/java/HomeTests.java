@@ -22,12 +22,10 @@ public class HomeTests extends BaseUI {
     @Test
 
     public void iFrame(){
-        WebElement iFrm = driver.findElement(By.xpath("//div[@class='video']//iframe"));
+        WebElement iFrm = driver.findElement(Locators.IFRAME_VIDEO);
         driver.switchTo().frame(iFrm);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class ='ytp-large-play-button ytp-button']"))); //explicit wait
-        driver.findElement(By.xpath("//button[@class ='ytp-large-play-button ytp-button']")).click();
-
-        WebElement play_button = driver.findElement(By.xpath("//button[@class ='ytp-large-play-button ytp-button']"));
+        wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_PLAY)); //explicit wait
+        driver.findElement(Locators.BUTTON_PLAY).click();
 
     }
 

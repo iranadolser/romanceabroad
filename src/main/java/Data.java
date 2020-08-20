@@ -1,5 +1,7 @@
 public class Data {
 
+    public static final String homeURL = "https://romanceabroad.com/";
+
     //Registration
     public static final String email = "somebody3@somewhere.com";
     public static final String password = "Secret03";

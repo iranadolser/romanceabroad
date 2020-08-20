@@ -1,8 +1,5 @@
-import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -44,15 +41,4 @@ public class BaseUI {
         driver.quit();
     }
 
-    public void getDropDownListIndex(WebElement element,int index){
-        Select select = new Select(element);
-        select.selectByIndex(index);
-
-    }
-
-    public void getDropDownListValue(WebElement element,String age) {
-        Select select = new Select(element);
-        select.selectByValue(age);
-
-    }
 }

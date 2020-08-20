@@ -13,6 +13,9 @@ public class Locators {
     public static final By TAB_BLOG= By.xpath("//a[contains(text(),'BLOG')]");
     public static final By TAB_SIGN_IN = By.xpath("//a[@id='ajax_login_link']");
 
+    public static final By IFRAME_VIDEO = By.xpath("//div[@class='video']//iframe");
+    public static final By BUTTON_PLAY = By.xpath("//button[@class ='ytp-large-play-button ytp-button']");
+
 
     //Registration
     public static final By EMAIL = By.cssSelector("input#email");
