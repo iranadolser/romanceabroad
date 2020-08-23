@@ -36,6 +36,7 @@ public class HomePage extends BaseActions {
 
         driver.findElement(Locators.TEXT_FIELD_PHONE).sendKeys(Data.phone);
         driver.findElement(Locators.TEXT_FIELD_LOCATION).sendKeys(Data.location);
+        driver.findElement(Locators.CHECKBOX_CONFIRMATION);
     }
 
     public void clickBookNowLink(){

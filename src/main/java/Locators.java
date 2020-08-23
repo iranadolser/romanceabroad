@@ -24,6 +24,7 @@ public class Locators {
     public static final By TEXT_FIELD_USERNAME = By.xpath("//input[@id='nickname']");
     public static final By TEXT_FIELD_PHONE = By.xpath("//input[@name='data[phone]']");
     public static final By TEXT_FIELD_LOCATION = By.xpath("//input[@placeholder='Type your location']");
+    public static final By CHECKBOX_CONFIRMATION =By.xpath("//input[@id='confirmation']");
 
     public static final By DAYS = By.cssSelector("#daySelect");
     public static final By SELECT_DAY = By.xpath("//li[@data-handler='selectDay']//a[text()='30']");
