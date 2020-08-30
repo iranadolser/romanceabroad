@@ -8,4 +8,6 @@ public class PhotoTabTests extends BaseUI {
         photoTabPage.openPhotoTab();
     }
 
+
+
 }
