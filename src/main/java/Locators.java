@@ -34,10 +34,11 @@ public class Locators {
     public static final By YEARS = By.cssSelector("#yearSelect");
     public static final By SELECT_YEAR = By.xpath("//li[@data-handler='selectYear']//a[text()='1979']");
 
-    //Searh
+    //Search
     public static final By AGE_MAX = By.cssSelector("select[name='age_max']");
     public static final By AGE_MIN = By.cssSelector("select[name='age_min']");
     public static final By BUTTON_SEARCH = By.cssSelector("#main_search_button_user_advanced");
+
 
 
 }

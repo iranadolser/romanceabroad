@@ -10,7 +10,7 @@ public class HomeTests extends BaseUI {
 
     @Test
     public void checkingOutTabs() {
-        List<WebElement> links = driver.findElements(Locators.TABS);
+        List<WebElement> links = driver.findElements(Locators.TABS);   //HW tasks 10
         System.out.println(links.size());
         for (int i = 0; i < links.size(); i++) {
             String info = links.get(i).getText();

@@ -13,6 +13,8 @@ public class SearchTests extends BaseUI {
         searchPage.openPrettyWomenTab();
         searchPage.searchByMinMaxAge();
         searchPage.searchByMinMaxAge();
+        searchPage.sortingByMinMaxAge();
+        searchPage.agesByMinMaxAge();
 
         driver.findElement(By.xpath("//div[contains(@class,'slick-slide slick-current slick-active')]//img"));
 

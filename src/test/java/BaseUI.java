@@ -24,6 +24,7 @@ public class BaseUI {
     TourToUkrainePage tourToUkrainePage;
 
     @BeforeMethod
+
     @Parameters("browser")
     public void setup(@Optional("chrome") String browser, Method method) {
 

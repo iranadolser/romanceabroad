@@ -38,54 +38,72 @@ public class SearchPage extends BaseActions {
         driver.findElement(Locators.BUTTON_SEARCH);
         getDropDownListValue(ageMin, "18");
         getDropDownListValue(ageMax, "55");
-        //Assert.assertSame(ageMin,"18");
-        //Assert.assertEquals(ageMax,"55");
         wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_SEARCH)); //explicit wait
         driver.findElement(Locators.BUTTON_SEARCH);
-
     }
-
 
     public void sortingByMinMaxAge() {
 
         WebElement ageMax = driver.findElement(Locators.AGE_MAX);
         WebElement ageMin = driver.findElement(Locators.AGE_MIN);
+        getDropDownListValue(ageMin, "18");
+        getDropDownListValue(ageMax, "80");
+
+        wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_SEARCH)); //explicit wait
+        driver.findElement(Locators.BUTTON_SEARCH).click();
+
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//div[contains(text(),'People found:')]")))); //explicit wait
+
+        driver.findElement(By.xpath("//div[contains(text(),'People found:')]"));
+
+        WebElement peopleFound = driver.findElement(By.xpath("//div[contains(text(),'People found:')]"));
+        String peopleFoundString = peopleFound.getText();
+        System.out.println(peopleFoundString);
+        //Boolean
+        Boolean stringResults = peopleFoundString.contains("71");
+        System.out.println(stringResults);
+        //Condition with string
+        if (peopleFoundString.contains("71"))
+            System.out.println("For ages from 18 to 80 are correct number of applicants found.");
+        else {
+            System.out.println("Wrong count of applicants while searching");
+        }
+    }
+
+    public void agesByMinMaxAge() {
+
+        WebElement ageMax = driver.findElement(Locators.AGE_MAX);
+        WebElement ageMin = driver.findElement(Locators.AGE_MIN);
         Select fromAge = new Select(ageMin);
         Select toAge = new Select(ageMax);
+        System.out.println();
+        System.out.println("For the ages groups below:");
+        //Loop
 
-
-        for (int i = 18; i < 45; i++) {
+        for (int i = 0; i < 62; i++) {
 
             fromAge.selectByIndex(i);
             toAge.selectByIndex(i + 1);
 
-            String fromAgeString = ageMin.getText();
-            String toAgeString = ageMax.getText();
-
-            System.out.println(fromAgeString + "_" + toAgeString);
             wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_SEARCH)); //explicit wait
             driver.findElement(Locators.BUTTON_SEARCH).click();
 
+            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);  //implicit wait
 
-            wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.cssSelector("//div[@class='lh30']")))); //explicit wait
-            driver.findElement(By.cssSelector("//div[@class='lh30']")).click();
-
-            WebElement peopleFound = driver.findElement(By.cssSelector("//div[@class='lh30']"));
+            //wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//*[contains(text(),'People found')]"))));
+            WebElement peopleFound = driver.findElement(By.xpath("//*[contains(text(),'People found')]"));
             String peopleFoundString = peopleFound.getText();
-            System.out.println(peopleFoundString);
-            driver.findElement(By.xpath("//a[contains(text(),'List view')]")).click();
 
-        }
+            System.out.println("From " + (18 + i) + "to " + (19 + i) + ": " + peopleFoundString);
+
+            //driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);  //implicit wait
+
+            /*WebElement refreshPage = driver.findElement(By.xpath("//button[@id='main_search_button_user_line']"));
+            wait.until(ExpectedConditions.elementToBeClickable(refreshPage));
+            refreshPage.click();*/
+      }
+        Boolean ageSelectControlPresence = ageMin.isDisplayed();
+        Assert.assertTrue(ageSelectControlPresence);
 
     }
-
 }
-
-
-
-
-
-
-
-
-

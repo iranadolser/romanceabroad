@@ -1,3 +1,5 @@
+import org.openqa.selenium.By;
+
 public class Data {
 
     public static final String homeURL = "https://romanceabroad.com/";
